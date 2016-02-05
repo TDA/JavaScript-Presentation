@@ -47,13 +47,28 @@ console.log(typeof obj);
 //console.log(classLikeObject.attr2);
 //console.log(this === classLikeObject.attr2);
 
-function Person(name, age) {
+var Person = function (name, age) {
   // Java-Style classes
   this.name = name;
   this.age = age;
-}
+};
 
 var dad = new Person("Dad", 55);
 var mom = new Person("Mom", 55);
 
 console.log(dad.age);
+
+// adding a property to an object
+dad.height = "168 cm";
+console.log(dad);
+console.log(mom);
+
+Person.prototype.height = "";
+// prototypal inheritance
+sis = new Person("Sis", 30, "");
+console.log(dad);
+console.log(sis);
+
+for (var obj1 in sis) {
+  console.log(obj1);
+}
