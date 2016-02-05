@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    Hello I am a header
+</div>
+<div>
+    Hello i am random static content, that never changes, kindly forgive me.
+</div>
+<form>
+    <input type="submit" value="Get Time!" id="gettime">
+</form>
+<span id="time"></span>
+<span id="oldTime"></span>
+<div>
+    Hello I am a footer
+</div>
+<script src="Scripts/jquery-polyfill.js"></script>
+<script src="Scripts/ajax.js"></script>
+<script>
+    function callback(res) {
+        console.log(res.target.response);
+        $("#time").innerHTML = res.target.response;
+    }
+    
+    function oldCallback(res) {
+        console.log(res.response);
+        $("#oldTime").innerHTML = res.response;
+    }
+
+    var method = "get";
+    var action = "http://localhost:63343/htdocs/JS-Presentation-PHP/ajax.php";
+
+    $('#gettime').addEventListener("click", function (e) {
+        e.preventDefault();
+        ajax(action, method, callback);
+    });
+
+    $('#gettime').addEventListener("click", function (e) {
+        e.preventDefault();
+        oldAjax(action, method, oldCallback);
+    });
+
+</script>
+</body>
+</html>

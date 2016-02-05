@@ -3,8 +3,12 @@
  */
 
 function $(element) {
-  if (!document.querySelectorAll) {
-    return document.querySelectorAll(element);
+  if (document.querySelectorAll) {
+    if (element.charAt(0) === '#') {
+      return document.querySelector(element);
+    } else {
+      return document.querySelectorAll(element);
+    }
   } else {
     // means theres no builtin support for
     // querySelector engine
@@ -12,7 +16,7 @@ function $(element) {
     if (element.charAt(0) === '#') {
       // we found an id
       // console.log(element.slice(1));
-      return document.getElementById(element.slice(1));
+      return document.getElementById(element.slice(1))[0];
     } else if (element.charAt(0) === '.') {
       // means we got a class
       return document.getElementsByClassName(element.slice(1));
