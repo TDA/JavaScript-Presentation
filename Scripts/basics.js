@@ -14,8 +14,12 @@ var array2 = new Array("a", "b", "c"); // never use this
 console.log(array);
 console.log(array2);
 
+
+
 // SURPRISE!!!
 console.log(typeof array, typeof array2);
+
+
 
 // basic operators
 var x = 6 + 7;
