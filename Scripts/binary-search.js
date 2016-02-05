@@ -20,3 +20,4 @@ function binarySearch(array, start, end, element) {
     return -1;
   }
 }
+

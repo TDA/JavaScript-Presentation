@@ -3,8 +3,9 @@
  */
 
 function $(element) {
-  if (document.querySelectorAll) {
-    if (element.charAt(0) === '#') {
+  var firstChar = element.charAt(0);
+  if (!document.querySelectorAll) {
+    if (firstChar === '#') {
       return document.querySelector(element);
     } else {
       return document.querySelectorAll(element);
@@ -13,11 +14,11 @@ function $(element) {
     // means theres no builtin support for
     // querySelector engine
     // first, we need to check if its an id
-    if (element.charAt(0) === '#') {
+    if (firstChar === '#') {
       // we found an id
       // console.log(element.slice(1));
-      return document.getElementById(element.slice(1))[0];
-    } else if (element.charAt(0) === '.') {
+      return document.getElementById(element.slice(1));
+    } else if (firstChar === '.') {
       // means we got a class
       return document.getElementsByClassName(element.slice(1));
     } else {

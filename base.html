@@ -10,5 +10,13 @@
 
 <script src="Scripts/jquery-polyfill.js"></script>
 <script src="Scripts/binary-search.js"></script>
+<script>
+    var x = binarySearch([1, 2, 3, 4], 0, 4, 1);
+    if (x == 0) {
+        setTimeout(function() {alert("hello");}, 1000);
+        setTimeout(alert("hello"), 1500);
+    }
+    alert(x);
+</script>
 </body>
 </html>
