@@ -68,9 +68,9 @@ function bf(BloomFilter, bloomdata) {
   };
 }
 
-var x  = new bf(new Function(), {});
-console.log(x, x());
-console.log(x.toString());
-
-console.log("----------------------------------------------------");
-console.log(x().toString());
+//var x  = new bf(new Function(), {});
+//console.log(x, x());
+//console.log(x.toString());
+//
+//console.log("----------------------------------------------------");
+//console.log(x().toString());
