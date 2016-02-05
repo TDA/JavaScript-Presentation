@@ -9,19 +9,19 @@ function add(x, y) {
 
 console.log(add(3, 5));
 
-// function expression
-var x = function y() {
-  return 8;
-};
-console.log(x);
-console.log(x());
-
-// function literal
-var fLiteral = function() {
-  return 11;
-};
-console.log(fLiteral);
-console.log(fLiteral());
+//// function expression
+//var x = function y() {
+//  return 8;
+//};
+//console.log(x);
+//console.log(x());
+//
+//// function literal
+//var fLiteral = function() {
+//  return 11;
+//};
+//console.log(fLiteral);
+//console.log(fLiteral());
 
 
 
