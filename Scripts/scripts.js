@@ -4,12 +4,18 @@
 
 // basic types
 var i = 10;
+console.log(i, typeof i);
 var j = "Hello";
+console.log(j, typeof j);
 var bool = true;
+console.log(bool, typeof bool);
 var array = ["a", "b"];
 var array2 = new Array("a", "b", "c"); // never use this
 console.log(array);
 console.log(array2);
+
+// SURPRISE!!!
+console.log(typeof array, typeof array2);
 
 // basic operators
 var x = 6 + 7;
