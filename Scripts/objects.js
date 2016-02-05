@@ -46,3 +46,14 @@ console.log(typeof obj);
 //classLikeObject.method1();
 //console.log(classLikeObject.attr2);
 //console.log(this === classLikeObject.attr2);
+
+function Person(name, age) {
+  // Java-Style classes
+  this.name = name;
+  this.age = age;
+}
+
+var dad = new Person("Dad", 55);
+var mom = new Person("Mom", 55);
+
+console.log(dad.age);
