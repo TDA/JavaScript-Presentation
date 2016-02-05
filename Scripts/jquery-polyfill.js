@@ -16,6 +16,9 @@ function $(element) {
     } else if (element.charAt(0) === '.') {
       // means we got a class
       return document.getElementsByClassName(element.slice(1));
+    } else {
+      // its probably a tag, we are not looking at complex selectors
+      return document.getElementsByTagName(element);
     }
   }
 }
