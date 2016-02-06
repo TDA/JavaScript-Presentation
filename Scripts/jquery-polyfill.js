@@ -4,7 +4,7 @@
 
 function $(element) {
   var firstChar = element.charAt(0);
-  if (!document.querySelectorAll) {
+  if (document.querySelectorAll) {
     if (firstChar === '#') {
       return document.querySelector(element);
     } else {

@@ -7,37 +7,40 @@ function add(x, y) {
   return x + y;
 }
 
-console.log(add(3, 5));
+//console.log(add(3, 5));
 
-//// function expression
-//var x = function y() {
-//  return 8;
-//};
+// function expression
+var x = function y() {
+  return 8;
+};
 //console.log(x);
 //console.log(x());
-//
-//// function literal
-//var fLiteral = function() {
-//  return 11;
-//};
+
+// function literal
+var fLiteral = function() {
+  return 11;
+};
 //console.log(fLiteral);
 //console.log(fLiteral());
 
 
 
-// LEXICAL SCOPING
-//function closure() {
-//  // emulate private variables
-//  var x = 1;
-//  return function() {
-//    return x++;
-//  }
-//}
+ //LEXICAL SCOPING
+function closure() {
+  // emulate private variables
+  var x = 1;
+  return function() {
+    return x++;
+  }
+}
 //
-//c = closure();
-//console.log(c());
-//console.log(c());
-//console.log(c());
-//console.log(c());
+c = closure();
+console.log(c.toString());
+console.log(c());
+console.log(c());
+console.log(c());
 
+d = closure();
+console.log(d.toString());
+console.log(d());
 // Advanced closures
