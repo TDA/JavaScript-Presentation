@@ -80,3 +80,5 @@ for (var obj1 in sis) {
 for (var obj2 in mom) {
   console.log(obj2);
 }
+
+console.log(sis instanceof Person);
