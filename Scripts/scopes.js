@@ -18,3 +18,23 @@ function outer() {
 console.log("global", color, tempColor, anotherColor);
 
 outer();
+
+// declaring and masking
+
+function changeLocalColor() {
+  var color = "yellow"; // masks global color
+  color = "pink"; // overwrites local var, not global
+  return color;
+}
+
+console.log(changeLocalColor());
+console.log(color);
+
+function changeGlobalColor() {
+  color = "pink"; // overwrites global var
+  // same as window.color = "pink";
+  return color;
+}
+
+console.log(changeGlobalColor());
+console.log(color);
