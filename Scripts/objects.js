@@ -81,4 +81,5 @@ for (var obj2 in mom) {
   console.log(obj2);
 }
 
+// checking what an objects type is
 console.log(sis instanceof Person);
