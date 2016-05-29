@@ -38,3 +38,6 @@ function changeGlobalColor() {
 
 console.log(changeGlobalColor());
 console.log(color);
+
+// this differentiates js from other langs,
+// no block scope, only function scope
